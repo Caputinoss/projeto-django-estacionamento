@@ -152,7 +152,7 @@ JAZZMIN_SETTINGS = {
     # "login_logo": "images/logo.svg",
 
     # Logo to use for login form in dark themes (defaults to login_logo)
-    # "login_logo_dark": None,  
+    # "login_logo_dark": None, 
 
     # CSS classes that are applied to the logo above
     # "site_logo_classes": "img-circle",
@@ -284,7 +284,4 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ]
 }

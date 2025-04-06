@@ -10,6 +10,7 @@ class VehicleTypeAdmin(admin.ModelAdmin):
 
     list_filter = ('name',)
 
+
 @admin.register(Vehicle)
 class VehicleAdmin(admin.ModelAdmin):
     list_display = (

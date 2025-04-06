@@ -1,11 +1,10 @@
 from django.db import models
 from customers.models import Customer
 
-# Create your models here.
 
 class VehicleType(models.Model):
     name = models.CharField(
-        max_length=50, 
+        max_length=50,
         verbose_name='Nome',
         unique=True,
     )
@@ -15,11 +14,11 @@ class VehicleType(models.Model):
         null=True,
     )
     created_at = models.DateTimeField(
-        auto_now_add=True, 
+        auto_now_add=True,
         verbose_name='Criado em',
     )
     updated_at = models.DateTimeField(
-        auto_now=True, 
+        auto_now=True,
         verbose_name='Atualizado em',
     )
 
@@ -31,17 +30,18 @@ class VehicleType(models.Model):
     def __str__(self):
         return self.name
 
+
 class Vehicle(models.Model):
     vehicle_type = models.ForeignKey(
-        VehicleType, 
-        on_delete=models.PROTECT, 
+        VehicleType,
+        on_delete=models.PROTECT,
         related_name='vehicles',
         verbose_name='Tipo de Veículo',
         blank=True,
         null=True,
     )
     license_plate = models.CharField(
-        max_length=10, 
+        max_length=10,
         verbose_name='Placa',
         unique=True,
     )
@@ -64,20 +64,20 @@ class Vehicle(models.Model):
         null=True,
     )
     owner = models.ForeignKey(
-        Customer, 
-        on_delete=models.PROTECT, 
+        Customer,
+        on_delete=models.PROTECT,
         related_name='vehicles',
         verbose_name='Proprietário',
         blank=True,
         null=True,
     )
     created_at = models.DateTimeField(
-        auto_now_add=True, 
+        auto_now_add=True,
         verbose_name='Criado em',
     )
 
     updated_at = models.DateTimeField(
-        auto_now=True, 
+        auto_now=True,
         verbose_name='Atualizado em',
     )
 
@@ -85,6 +85,6 @@ class Vehicle(models.Model):
         verbose_name = 'Veículo'
         verbose_name_plural = 'Veículos'
         ordering = ['license_plate']
-    
+
     def __str__(self):
         return self.license_plate
