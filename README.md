@@ -33,35 +33,6 @@ O **Parking Service API** é um sistema backend que oferece funcionalidades comp
 
 ---
 
-## 🧩 Estrutura do Projeto
-projeto-django-estacionamento/
-│
-├── manage.py
-├── requirements.txt
-├── db.sqlite3
-│
-├── core/ # Configurações principais do projeto
-│ ├── settings.py
-│ ├── urls.py
-│ └── wsgi.py
-│
-├── parking/ # App principal
-│ ├── models.py # Entidades: Cliente, Veículo, Vaga, Ticket
-│ ├── serializers.py # Serialização dos dados para API
-│ ├── views.py # Lógica dos endpoints
-│ ├── urls.py # Rotas da aplicação
-│ ├── signals.py # Atualização automática de status das vagas
-│ ├── admin.py # Configuração do Django Admin
-│ ├── permissions.py # Regras de acesso e autenticação
-│ ├── tests.py # Testes automatizados
-│ └── services/ # Serviços auxiliares (futuro: notificações, Celery)
-│
-└── docs/
-└── README.md # Este arquivo
-
-
----
-
 ## 🧮 Modelagem de Domínio
 
 | Entidade | Descrição |
@@ -96,20 +67,27 @@ projeto-django-estacionamento/
 ```bash
 git clone https://github.com/Caputinoss/projeto-django-estacionamento.git
 cd projeto-django-estacionamento
+```
 
 ###  2️⃣ Criar, ativar o ambiente virtual e instalar dependências
+
+```bash
 python -m venv .venv
 source .venv/bin/activate   # Linux/Mac
 .venv\Scripts\activate      # Windows
 pip install -r requirements.txt
-
+```
 ### 3️⃣ Aplicar as migrações e criar superusuário
 
+```bash
 python manage.py migrate
 python manage.py createsuperuser
+```
 
 ### 4️⃣ Rodar o Servidor local
+```bash
 python manage.py runserver
+```
 
 ## 📡 Swagger
 - Painel Admin → http://localhost:8000/admin/
