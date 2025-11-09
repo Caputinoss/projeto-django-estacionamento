@@ -15,6 +15,7 @@ O **Parking Service API** é um sistema backend que oferece funcionalidades comp
 
 🗺️ **Documentação de referência:**  
 [Whimsical — Diagrama do Sistema Parking Service](https://whimsical.com/parking-service-SSoifu29a1MVLAmLAPMk2a)
+
 [Notion — Sistema e API de Estacionamento (By: pycodebr)](https://pickle-reading-bd9.notion.site/py_live-039-1bf9956f3dc9804998aaee8c46f77751)
 
 ---
