@@ -27,7 +27,6 @@ O **Parking Service API** é um sistema backend que oferece funcionalidades comp
 | **Django 5+** | Framework web |
 | **Django REST Framework (DRF)** | Criação da API RESTful |
 | **SQLite** | Banco de dados local |
-| **PostgreSQL** *(futuro)* | Banco para produção |
 | **JWT (SimpleJWT)** | Autenticação e segurança |
 | **Jazzmin** | Dashboard administrativo moderno |
 
